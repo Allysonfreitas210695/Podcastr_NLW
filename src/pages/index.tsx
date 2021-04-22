@@ -8,7 +8,9 @@ import { convertDurationToTimeString } from "../utils/convertDurationToTimeStrin
 
 import styles from "./home.module.scss";
 import { useContext } from "react";
-import { PlayContext } from "../contexts/playContexts";
+import { PlayerContent } from "../contexts/PlayerContext";
+
+
 
 // Server Side Rendering (SSR)
 // useEffect(() => {
@@ -46,7 +48,7 @@ type HomeProps = {
 };
 
 export default function Home({ lastEpisode, allEpisodes }: HomeProps) {
-  const { play }= useContext(PlayContext);
+  const { play }= useContext(PlayerContent);
 
   return (
     <div className={styles.homepage}>

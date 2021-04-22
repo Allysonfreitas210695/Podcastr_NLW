@@ -17,4 +17,4 @@ type PlayContextData = {
     togglePlay: () => void;
 }
 
-export const PlayContext = createContext({} as PlayContextData)
+export const PlayerContent = createContext({} as PlayContextData)

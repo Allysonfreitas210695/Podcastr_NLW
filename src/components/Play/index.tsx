@@ -3,7 +3,8 @@ import { useContext, useEffect, useRef } from "react";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css'
 import styles from "./styles.module.scss";
-import { PlayContext } from "../../contexts/PlayContexts";
+import { PlayerContent } from '../../contexts/PlayerContext'
+
 
 export function Play() {
  const audioRef = useRef<HTMLAudioElement>(null);
@@ -13,7 +14,7 @@ export function Play() {
         currentEpisodeIndex, 
         isPlaying, 
         togglePlay,
-        setPlayingState} = useContext(PlayContext)
+        setPlayingState} = useContext(PlayerContent)
 
  const episode = episodeList[currentEpisodeIndex]
 

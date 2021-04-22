@@ -3,7 +3,8 @@ import { Play } from "../components/Play";
 import "../styles/globo.scss";
 import styles from "../styles/app.module.scss";
 import { useState } from "react";
-import { PlayContext } from "../contexts/PlayContexts";
+import { PlayerContent } from "../contexts/PlayerContext";
+
 
 function MyApp({ Component, pageProps }) {
   const [episodeList, setEpisodeList] = useState([])
@@ -25,7 +26,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <PlayContext.Provider value={ {episodeList, currentEpisodeIndex , play, isPlaying, togglePlay, setPlayingState} }>
+    <PlayerContent.Provider value={ {episodeList, currentEpisodeIndex , play, isPlaying, togglePlay, setPlayingState} }>
     <div className={styles.wrapper}>
       <main>
         <Header />
@@ -33,7 +34,7 @@ function MyApp({ Component, pageProps }) {
       </main>
       <Play/>
     </div>
-    </PlayContext.Provider>
+    </PlayerContent.Provider>
   );
 }
 
