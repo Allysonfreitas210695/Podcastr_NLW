@@ -10,5 +10,6 @@ export function convertDurationToTimeString(duration: number) {
   ].map(unit => String(unit).padStart(2, '0')) //ex: 1 houra ele colocar zero no final
   .join(':')
 
+  
   return timeString;
 }
