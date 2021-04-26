@@ -15,7 +15,7 @@ TypeScript
 🚀 Getting started
 Clone the project and access the folder
 
-$ git clone https://github.com/guilhermecapitao/podcastr.git && cd podcastr
+$ git clone https://github.com/Allysonfreitas210695/podcastr_nlw.git && cd podcastr
 Follow the steps below
 
 # Install the dependencies
